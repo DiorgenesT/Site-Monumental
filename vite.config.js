@@ -24,6 +24,7 @@ export default defineConfig({
         template: `${name}.html`,
         injectOptions: {
           data: { pageName: name },
+          ejsOptions: { root: resolve(__dirname) },
         },
       })),
     }),
