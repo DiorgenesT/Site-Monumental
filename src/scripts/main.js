@@ -8,6 +8,7 @@ import { initFab } from './fab.js';
 import { initCookieBanner } from './cookie-banner.js';
 import { initCounters } from './counters.js';
 import { initTestimonials } from './testimonials.js';
+import { initForm } from './forms.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,6 +20,7 @@ export function initSite() {
   initCookieBanner();
   initCounters();
   initTestimonials();
+  initForm(document.getElementById('form-seja-prestador'), '/api/enviar-seja-prestador.php');
   document.body.classList.add('js-ready');
 }
 
