@@ -1,2 +1,6 @@
 CLAUDE.md
 .superpowers/
+node_modules/
+dist/
+public/api/config.php
+.venv/
