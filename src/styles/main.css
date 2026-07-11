@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-neutral-900 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .heading-xl {
+    @apply text-3xl md:text-5xl font-black leading-tight text-neutral-900;
+  }
+  .section-light {
+    @apply bg-white py-20 md:py-32;
+  }
+  .section-tinted {
+    @apply bg-neutral-50 py-20 md:py-32;
+  }
+  .card-surface {
+    @apply bg-white rounded-xl shadow-lg border border-neutral-100 p-6;
+  }
+  .btn-primary {
+    @apply inline-flex items-center bg-gradient-to-r from-bordo to-bordo-dark hover:from-bordo-dark hover:to-bordo
+           text-white font-bold py-4 px-10 rounded-full text-lg transition-all duration-300
+           transform hover:scale-105 shadow-lg hover:shadow-bordo/40;
+  }
+  .badge-red {
+    @apply text-bordo font-bold;
+  }
+  .dg-mark {
+    @apply gap-1;
+  }
+  .dg-block {
+    @apply w-6 h-6 bg-black text-white text-xs font-black flex items-center justify-center
+           transition-transform duration-300;
+  }
+  .dg-block-d {
+    transform: rotate(-6deg);
+  }
+  .dg-block-g {
+    transform: rotate(6deg);
+  }
+  .dg-credit:hover .dg-block-d {
+    transform: rotate(-6deg) scale(1.15) translateY(-2px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  .dg-credit:hover .dg-block-g {
+    transform: rotate(6deg) scale(1.15) translateY(-2px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
