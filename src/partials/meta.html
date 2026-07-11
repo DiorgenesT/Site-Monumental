@@ -1,0 +1,24 @@
+<!-- src/partials/meta.html -->
+<!-- Uso: <%- include('/src/partials/meta.html', { title, description, path, ogImage }) %> -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= title %></title>
+
+<meta name="description" content="<%= description %>">
+<meta name="author" content="Monumental Assistência">
+<meta name="robots" content="<%= typeof robots !== 'undefined' ? robots : 'index, follow' %>">
+<link rel="canonical" href="https://www.monumentalassistencia.com.br<%= path %>">
+
+<meta property="og:title" content="<%= title %>">
+<meta property="og:description" content="<%= description %>">
+<meta property="og:image" content="https://www.monumentalassistencia.com.br<%= ogImage %>">
+<meta property="og:url" content="https://www.monumentalassistencia.com.br<%= path %>">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<%= title %>">
+<meta name="twitter:description" content="<%= description %>">
+<meta name="twitter:image" content="https://www.monumentalassistencia.com.br<%= ogImage %>">
+
+<link id="favicon" rel="icon" href="/img/favicon.ico" type="image/x-icon">
