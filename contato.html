@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <%- include('/src/partials/meta.html', {
+    title: 'Contato e Localização - Monumental Assistência em Betim/MG',
+    description: 'Fale com a Monumental Assistência: telefones 24h, e-mail, endereço em Betim/MG e perguntas frequentes sobre assistência veicular para associações.',
+    path: '/contato.html',
+    ogImage: '/img/logo.png'
+  }) %>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "Monumental Assistência Veicular 24h",
+    "image": "https://www.monumentalassistencia.com.br/img/logo.png",
+    "url": "https://www.monumentalassistencia.com.br",
+    "telephone": "+55-0800-591-2507",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Amazonas, 1276",
+      "addressLocality": "Betim",
+      "addressRegion": "MG",
+      "postalCode": "32600-032",
+      "addressCountry": "BR"
+    },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Minas Gerais" },
+      { "@type": "Country", "name": "Brazil" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "O que é a assistência 24h para associações?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É um serviço especializado que oferece suporte completo (reboque, chaveiro, pane seca, etc.) para os associados de uma entidade de proteção veicular. A Monumental gerencia todos os atendimentos, garantindo agilidade e qualidade em nome da sua associação."
+      }
+    },{
+      "@type": "Question",
+      "name": "A Monumental atende em todo o Brasil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Contamos com uma vasta rede de prestadores credenciados e qualificados em todos os 26 estados e no Distrito Federal, garantindo cobertura completa em todo o território nacional para os seus associados."
+      }
+    },{
+      "@type": "Question",
+      "name": "Qual a vantagem de ter uma frota própria em BH e região?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nossa frota própria na Grande BH nos permite oferecer um tempo de resposta ainda menor e maior controle de qualidade nas áreas de maior demanda, funcionando como um reforço estratégico para garantir a satisfação do associado em momentos de pico."
+      }
+    },{
+      "@type": "Question",
+      "name": "Como a minha associação acompanha os atendimentos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oferecemos relatórios detalhados e um sistema de gestão transparente que permite à sua associação acompanhar em tempo real todos os chamados, custos e indicadores de satisfação. Isso garante total controle e confiança na nossa parceria."
+      }
+    }]
+  }
+  </script>
+</head>
+<body>
+  <%- include('/src/partials/header.html') %>
+  <main>
+    <section class="section-light">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h1 class="heading-xl">Nossa <span class="badge-red">Localização</span></h1>
+          <p class="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
+            Venha nos visitar e tomar um café. Estamos prontos para receber sua associação.
+          </p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              class="w-full h-96"
+              src="https://maps.google.com/maps?q=Av.%20Amazonas,%201276%20-%20Centro,%20Betim%20-%20MG,%2032600-032&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de localização da Monumental Assistência">
+            </iframe>
+          </div>
+          <div class="flex flex-col justify-center p-8 text-center lg:text-left">
+            <h2 class="text-3xl font-bold mb-6">
+              Estamos prontos para <span class="badge-red">atender você</span>
+            </h2>
+            <p class="text-lg text-neutral-600 mb-8">
+              Nossa equipe está à disposição para tirar suas dúvidas e apresentar a melhor solução para sua associação. Entre em contato ou venha nos visitar.
+            </p>
+            <div class="space-y-6">
+              <div>
+                <div class="flex items-center justify-center lg:justify-start gap-3">
+                  <i data-lucide="phone-call" class="w-6 h-6 text-bordo flex-shrink-0"></i>
+                  <h3 class="text-xl font-semibold">Assistência 24h</h3>
+                </div>
+                <p class="mt-1 text-neutral-600 text-center lg:text-left lg:pl-9">
+                  Para emergências, ligue a qualquer hora em nossos números 0800.
+                </p>
+              </div>
+              <div>
+                <div class="flex items-center justify-center lg:justify-start gap-3">
+                  <i data-lucide="building" class="w-6 h-6 text-bordo flex-shrink-0"></i>
+                  <h3 class="text-xl font-semibold">Atendimento (Escritório)</h3>
+                </div>
+                <div class="mt-2 space-y-2 text-center lg:text-left lg:pl-9">
+                  <div class="flex items-center justify-center lg:justify-start gap-3">
+                    <i data-lucide="clock" class="w-5 h-5 text-neutral-400 flex-shrink-0"></i>
+                    <span class="text-lg text-neutral-700">Segunda a Sexta, 08h às 18h</span>
+                  </div>
+                  <div class="flex items-center justify-center lg:justify-start gap-3">
+                    <i data-lucide="mail" class="w-5 h-5 text-neutral-400 flex-shrink-0"></i>
+                    <a href="mailto:direcao@monumentalassistencia.com.br" class="text-lg text-neutral-700 hover:text-bordo transition-colors">direcao@monumentalassistencia.com.br</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <div class="inline-flex items-center gap-4 mb-4">
+            <i data-lucide="map-pin" class="w-8 h-8 text-bordo"></i>
+            <h3 class="text-2xl font-bold">Nosso Endereço</h3>
+          </div>
+          <p class="text-xl text-neutral-700">
+            Av. Amazonas, 1276 - Centro, Betim - MG, 32600-032
+          </p>
+          <div class="mt-6 flex justify-center items-center gap-6">
+            <a href="https://www.instagram.com/monumentalassistencia24h/" target="_blank" rel="noopener noreferrer" class="text-[#E4405F] hover:text-[#C13584] transition-colors duration-300 transform hover:scale-110">
+              <i data-lucide="instagram" class="w-8 h-8"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/monumental-assist%C3%AAncia-24hrs/?viewAsMember=true" target="_blank" rel="noopener noreferrer" class="text-[#0077B5] hover:text-[#005E92] transition-colors duration-300 transform hover:scale-110">
+              <i data-lucide="linkedin" class="w-8 h-8"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tinted">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="heading-xl">Perguntas <span class="badge-red">Frequentes</span></h2>
+          <p class="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
+            Tire suas dúvidas sobre nossos serviços de assistência veicular para associações.
+          </p>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-4">
+          <div class="faq-item card-surface !p-0">
+            <button type="button" class="faq-question w-full flex justify-between items-center p-6 text-left" aria-expanded="false">
+              <h3 class="text-xl font-semibold">O que é a assistência 24h para associações?</h3>
+              <i data-lucide="chevron-down" class="faq-icon w-6 h-6 text-bordo transition-transform duration-300 flex-shrink-0"></i>
+            </button>
+            <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+              <div class="p-6 pt-0 text-neutral-500">
+                <p>É um serviço especializado que oferece suporte completo (reboque, chaveiro, pane seca, etc.) para os associados de uma entidade de proteção veicular. A Monumental gerencia todos os atendimentos, garantindo agilidade e qualidade em nome da sua associação.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item card-surface !p-0">
+            <button type="button" class="faq-question w-full flex justify-between items-center p-6 text-left" aria-expanded="false">
+              <h3 class="text-xl font-semibold">A Monumental atende em todo o Brasil?</h3>
+              <i data-lucide="chevron-down" class="faq-icon w-6 h-6 text-bordo transition-transform duration-300 flex-shrink-0"></i>
+            </button>
+            <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+              <div class="p-6 pt-0 text-neutral-500">
+                <p>Sim. Contamos com uma vasta rede de prestadores credenciados e qualificados em todos os 26 estados e no Distrito Federal, garantindo cobertura completa em todo o território nacional para os seus associados.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item card-surface !p-0">
+            <button type="button" class="faq-question w-full flex justify-between items-center p-6 text-left" aria-expanded="false">
+              <h3 class="text-xl font-semibold">Qual a vantagem de ter uma frota própria em BH e região?</h3>
+              <i data-lucide="chevron-down" class="faq-icon w-6 h-6 text-bordo transition-transform duration-300 flex-shrink-0"></i>
+            </button>
+            <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+              <div class="p-6 pt-0 text-neutral-500">
+                <p>Nossa frota própria na Grande BH nos permite oferecer um tempo de resposta ainda menor e maior controle de qualidade nas áreas de maior demanda, funcionando como um reforço estratégico para garantir a satisfação do associado em momentos de pico.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item card-surface !p-0">
+            <button type="button" class="faq-question w-full flex justify-between items-center p-6 text-left" aria-expanded="false">
+              <h3 class="text-xl font-semibold">Como a minha associação acompanha os atendimentos?</h3>
+              <i data-lucide="chevron-down" class="faq-icon w-6 h-6 text-bordo transition-transform duration-300 flex-shrink-0"></i>
+            </button>
+            <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+              <div class="p-6 pt-0 text-neutral-500">
+                <p>Oferecemos relatórios detalhados e um sistema de gestão transparente que permite à sua associação acompanhar em tempo real todos os chamados, custos e indicadores de satisfação. Isso garante total controle e confiança na nossa parceria.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item card-surface !p-0">
+            <button type="button" class="faq-question w-full flex justify-between items-center p-6 text-left" aria-expanded="false">
+              <h3 class="text-xl font-semibold">Qual a diferença entre proteção veicular e seguro tradicional?</h3>
+              <i data-lucide="chevron-down" class="faq-icon w-6 h-6 text-bordo transition-transform duration-300 flex-shrink-0"></i>
+            </button>
+            <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+              <div class="p-6 pt-0 text-neutral-500">
+                <p>A proteção veicular é oferecida por associações sem fins lucrativos, onde os custos são rateados entre os associados, tornando-a geralmente mais acessível. Já o seguro tradicional é um contrato com uma seguradora, uma empresa com fins lucrativos, onde o valor (prêmio) é fixo e calculado com base no perfil do condutor e risco.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item card-surface !p-0">
+            <button type="button" class="faq-question w-full flex justify-between items-center p-6 text-left" aria-expanded="false">
+              <h3 class="text-xl font-semibold">Minha associação pode ter um plano personalizado?</h3>
+              <i data-lucide="chevron-down" class="faq-icon w-6 h-6 text-bordo transition-transform duration-300 flex-shrink-0"></i>
+            </button>
+            <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+              <div class="p-6 pt-0 text-neutral-500">
+                <p>Sim! Entendemos que cada associação tem necessidades únicas. Além dos nossos planos Gestão e Fixo, podemos desenvolver uma solução personalizada com as coberturas e quilometragens que melhor atendam ao perfil dos seus associados. Entre em contato para conversarmos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item card-surface !p-0">
+            <button type="button" class="faq-question w-full flex justify-between items-center p-6 text-left" aria-expanded="false">
+              <h3 class="text-xl font-semibold">O que acontece se um associado precisar de ajuda de madrugada?</h3>
+              <i data-lucide="chevron-down" class="faq-icon w-6 h-6 text-bordo transition-transform duration-300 flex-shrink-0"></i>
+            </button>
+            <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+              <div class="p-6 pt-0 text-neutral-500">
+                <p>Nossa central de atendimento funciona 24 horas por dia, 7 dias por semana, incluindo feriados. Não importa a hora ou o local, nossa equipe estará pronta para receber o chamado e enviar o socorro necessário com a máxima agilidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <%- include('/src/partials/footer.html') %>
+  <%- include('/src/partials/floating-buttons.html') %>
+  <%- include('/src/partials/cookie-banner.html') %>
+</body>
+</html>
