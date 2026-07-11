@@ -21,6 +21,7 @@ export function initSite() {
   initCounters();
   initTestimonials();
   initForm(document.getElementById('form-seja-prestador'), '/api/enviar-seja-prestador.php');
+  initForm(document.getElementById('form-trabalhe-conosco'), '/api/enviar-trabalhe-conosco.php');
   document.body.classList.add('js-ready');
 }
 
