@@ -1,5 +1,38 @@
 import '../styles/main.css';
-import { createIcons, icons } from 'lucide';
+import {
+  createIcons,
+  ArrowRight,
+  BatteryCharging,
+  Building,
+  CheckCircle,
+  CheckCircle2,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ClipboardList,
+  Clock,
+  FileText,
+  Fuel,
+  Instagram,
+  KeyRound,
+  Linkedin,
+  Mail,
+  MapPin,
+  Menu,
+  Phone,
+  PhoneCall,
+  Send,
+  ShieldCheck,
+  Smile,
+  TrendingUp,
+  Truck,
+  UploadCloud,
+  UserCircle,
+  UserPlus,
+  Users,
+  Wallet,
+  Wrench,
+} from 'lucide';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { initHeader } from './nav.js';
@@ -13,8 +46,42 @@ import { initFaq } from './faq.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const usedIcons = {
+  ArrowRight,
+  BatteryCharging,
+  Building,
+  CheckCircle,
+  CheckCircle2,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ClipboardList,
+  Clock,
+  FileText,
+  Fuel,
+  Instagram,
+  KeyRound,
+  Linkedin,
+  Mail,
+  MapPin,
+  Menu,
+  Phone,
+  PhoneCall,
+  Send,
+  ShieldCheck,
+  Smile,
+  TrendingUp,
+  Truck,
+  UploadCloud,
+  UserCircle,
+  UserPlus,
+  Users,
+  Wallet,
+  Wrench,
+};
+
 export function initSite() {
-  createIcons({ icons });
+  createIcons({ icons: usedIcons });
   initHeader();
   initFooter();
   initFab();
