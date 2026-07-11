@@ -6,6 +6,8 @@ import { initHeader } from './nav.js';
 import { initFooter } from './footer.js';
 import { initFab } from './fab.js';
 import { initCookieBanner } from './cookie-banner.js';
+import { initCounters } from './counters.js';
+import { initTestimonials } from './testimonials.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +17,8 @@ export function initSite() {
   initFooter();
   initFab();
   initCookieBanner();
+  initCounters();
+  initTestimonials();
   document.body.classList.add('js-ready');
 }
 
