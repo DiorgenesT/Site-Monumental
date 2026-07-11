@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <%- include('/src/partials/meta.html', {
+    title: 'Serviços de Assistência 24h - Reboque, Chaveiro, Bateria e Mais',
+    description: 'Reboque 24h, chaveiro, carga de bateria, troca de pneu e pane seca — assistência veicular completa para associados em todo o Brasil.',
+    path: '/servicos.html',
+    ogImage: '/img/servico-reboque.jpg'
+  }) %>
+</head>
+<body>
+  <%- include('/src/partials/header.html') %>
+  <main>
+    <section class="section-light">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="heading-xl mb-4">Serviços <span class="badge-red">Oferecidos</span></h1>
+        <p class="text-lg text-neutral-600 max-w-3xl mx-auto mb-16">
+          Assistência veicular completa, sempre à disposição dos seus associados:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+          <div class="card-surface flex flex-col items-start">
+            <div class="mb-4 text-bordo"><i data-lucide="truck" class="w-12 h-12"></i></div>
+            <h2 class="text-2xl font-bold mb-2">Reboque 24h</h2>
+            <p class="text-neutral-500">Em caso de panes ou acidentes, providenciamos o envio de socorro elétrico/mecânico e, se necessário, o reboque até a oficina mais próxima dentro do limite contratado.</p>
+          </div>
+          <div class="card-surface flex flex-col items-start">
+            <div class="mb-4 text-bordo"><i data-lucide="key-round" class="w-12 h-12"></i></div>
+            <h2 class="text-2xl font-bold mb-2">Chaveiro</h2>
+            <p class="text-neutral-500">Perda ou esquecimento de chaves, quebra na ignição ou fechadura: enviamos um profissional para abertura do veículo sem arrombamento.</p>
+          </div>
+          <div class="card-surface flex flex-col items-start">
+            <div class="mb-4 text-bordo"><i data-lucide="battery-charging" class="w-12 h-12"></i></div>
+            <h2 class="text-2xl font-bold mb-2">Carga de Bateria</h2>
+            <p class="text-neutral-500">Pane elétrica por falta de bateria? Enviamos um prestador para dar carga na bateria do veículo diretamente no local.</p>
+          </div>
+          <div class="card-surface flex flex-col items-start">
+            <div class="mb-4 text-bordo"><i data-lucide="wrench" class="w-12 h-12"></i></div>
+            <h2 class="text-2xl font-bold mb-2">Troca de Pneu</h2>
+            <p class="text-neutral-500">Danos ao pneu que impedem a locomoção: providenciamos o reboque até a borracharia mais próxima, dentro do raio contratado.</p>
+          </div>
+          <div class="card-surface flex flex-col items-start md:col-span-2">
+            <div class="mb-4 text-bordo"><i data-lucide="fuel" class="w-12 h-12"></i></div>
+            <h2 class="text-2xl font-bold mb-2">Pane Seca</h2>
+            <p class="text-neutral-500">Falta de combustível no meio do caminho: entregamos um limite de combustível em caráter emergencial para o associado seguir viagem.</p>
+          </div>
+        </div>
+        <a href="/planos.html" class="btn-primary mt-16">Conheça nossos planos<i data-lucide="arrow-right" class="ml-3 h-6 w-6"></i></a>
+      </div>
+    </section>
+  </main>
+  <%- include('/src/partials/footer.html') %>
+  <%- include('/src/partials/floating-buttons.html') %>
+  <%- include('/src/partials/cookie-banner.html') %>
+</body>
+</html>
