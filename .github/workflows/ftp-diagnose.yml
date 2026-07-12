@@ -1,0 +1,25 @@
+name: Diagnóstico FTP (temporário)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Instala lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      - name: Lista a raiz e ./public_html/ do login FTP
+        run: |
+          lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" "${{ secrets.FTP_SERVER }}" -e "
+          set ssl:verify-certificate no;
+          set ftp:ssl-force false;
+          set ftp:ssl-allow false;
+          echo '=== raiz (.) ===';
+          pwd;
+          ls -a;
+          echo '=== ./public_html/ (se existir) ===';
+          cd public_html && pwd && ls -a;
+          bye
+          "
