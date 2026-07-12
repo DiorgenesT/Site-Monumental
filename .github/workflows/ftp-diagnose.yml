@@ -10,12 +10,16 @@ jobs:
       - name: Instala lftp
         run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
 
-      - name: Lista a raiz do login FTP
+      - name: Lista a raiz e ./public_html/ do login FTP
         run: |
-          echo "=== Conteúdo da raiz (.) do login FTP ==="
-          lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" "${{ secrets.FTP_SERVER }}" -e "ls -a; pwd; bye" || true
-
-      - name: Tenta listar ./public_html/ a partir da raiz
-        run: |
-          echo "=== Conteúdo de ./public_html/ (se existir) ==="
-          lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" "${{ secrets.FTP_SERVER }}" -e "cd public_html && ls -a && pwd; bye" || true
+          lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" "${{ secrets.FTP_SERVER }}" -e "
+          set ssl:verify-certificate no;
+          set ftp:ssl-force false;
+          set ftp:ssl-allow false;
+          echo '=== raiz (.) ===';
+          pwd;
+          ls -a;
+          echo '=== ./public_html/ (se existir) ===';
+          cd public_html && pwd && ls -a;
+          bye
+          "
