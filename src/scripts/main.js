@@ -10,7 +10,6 @@ import {
   ChevronRight,
   ClipboardList,
   Clock,
-  FileText,
   Fuel,
   Instagram,
   KeyRound,
@@ -36,7 +35,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { initHeader } from './nav.js';
 import { initFooter } from './footer.js';
-import { initFab } from './fab.js';
 import { initCookieBanner } from './cookie-banner.js';
 import { initCounters } from './counters.js';
 import { initTestimonials } from './testimonials.js';
@@ -57,7 +55,6 @@ const usedIcons = {
   ChevronRight,
   ClipboardList,
   Clock,
-  FileText,
   Fuel,
   Instagram,
   KeyRound,
@@ -84,7 +81,6 @@ export function initSite() {
   createIcons({ icons: usedIcons });
   initHeader();
   initFooter();
-  initFab();
   initCookieBanner();
   initCounters();
   initTestimonials();
