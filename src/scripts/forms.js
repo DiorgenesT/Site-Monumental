@@ -22,6 +22,7 @@ export function initForm(formEl, endpoint) {
     }
 
     const formData = new FormData(formEl);
+    formData.set('elapsed_ms', String(elapsedMs));
     try {
       const res = await fetch(endpoint, { method: 'POST', body: formData });
       if (!res.ok) throw new Error('request failed');

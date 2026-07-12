@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-if (is_spam_submission($_POST)) {
+if (is_spam_submission($_POST) || is_too_fast($_POST['elapsed_ms'] ?? null)) {
     // Responde OK "silenciosamente" para não dar sinal ao bot, mas não envia e-mail.
     echo json_encode(['ok' => true]);
     exit;
@@ -53,6 +53,11 @@ try {
         if ($_FILES['attachment']['size'] > 5 * 1024 * 1024) {
             http_response_code(422);
             echo json_encode(['ok' => false, 'error' => 'file_too_large']);
+            exit;
+        }
+        if (!is_allowed_upload_type($_FILES['attachment']['name'], $_FILES['attachment']['tmp_name'])) {
+            http_response_code(422);
+            echo json_encode(['ok' => false, 'error' => 'invalid_file_type']);
             exit;
         }
         $mail->addAttachment($_FILES['attachment']['tmp_name'], $_FILES['attachment']['name']);

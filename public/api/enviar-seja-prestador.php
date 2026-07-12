@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-if (is_spam_submission($_POST)) {
+if (is_spam_submission($_POST) || is_too_fast($_POST['elapsed_ms'] ?? null)) {
     echo json_encode(['ok' => true]);
     exit;
 }
