@@ -11,40 +11,59 @@
 <body>
   <%- include('/src/partials/header.html') %>
   <main>
-    <section class="section-light section-cut">
-      <div class="container mx-auto px-4 text-center">
-        <h1 class="heading-xl text-4xl md:text-6xl mb-4">Serviços <span class="badge-red">Oferecidos</span></h1>
-        <p class="text-lg text-ink-600 max-w-3xl mx-auto mb-16">
-          Assistência veicular completa, sempre à disposição dos seus associados:
+    <section class="page-header">
+      <div class="container mx-auto px-4">
+        <span class="eyebrow text-white">O que fazemos</span>
+        <h1 class="heading-xl text-white text-5xl md:text-7xl mt-4">
+          Serviços<br><span class="text-bordo-light">Oferecidos</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">
+          Assistência veicular completa, sempre à disposição dos seus associados — em qualquer lugar do Brasil.
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-          <div class="card-surface flex flex-col items-start">
-            <div class="mb-4 text-bordo"><i data-lucide="truck" class="w-12 h-12"></i></div>
-            <h2 class="text-2xl font-bold mb-2">Reboque 24h</h2>
-            <p class="text-ink-500">Em caso de panes ou acidentes, providenciamos o envio de socorro elétrico/mecânico e, se necessário, o reboque até a oficina mais próxima dentro do limite contratado.</p>
-          </div>
-          <div class="card-surface flex flex-col items-start">
-            <div class="mb-4 text-bordo"><i data-lucide="key-round" class="w-12 h-12"></i></div>
-            <h2 class="text-2xl font-bold mb-2">Chaveiro</h2>
-            <p class="text-ink-500">Perda ou esquecimento de chaves, quebra na ignição ou fechadura: enviamos um profissional para abertura do veículo sem arrombamento.</p>
-          </div>
-          <div class="card-surface flex flex-col items-start">
-            <div class="mb-4 text-bordo"><i data-lucide="battery-charging" class="w-12 h-12"></i></div>
-            <h2 class="text-2xl font-bold mb-2">Carga de Bateria</h2>
-            <p class="text-ink-500">Pane elétrica por falta de bateria? Enviamos um prestador para dar carga na bateria do veículo diretamente no local.</p>
-          </div>
-          <div class="card-surface flex flex-col items-start">
-            <div class="mb-4 text-bordo"><i data-lucide="wrench" class="w-12 h-12"></i></div>
-            <h2 class="text-2xl font-bold mb-2">Troca de Pneu</h2>
-            <p class="text-ink-500">Danos ao pneu que impedem a locomoção: providenciamos o reboque até a borracharia mais próxima, dentro do raio contratado.</p>
-          </div>
-          <div class="card-surface flex flex-col items-start md:col-span-2">
-            <div class="mb-4 text-bordo"><i data-lucide="fuel" class="w-12 h-12"></i></div>
-            <h2 class="text-2xl font-bold mb-2">Pane Seca</h2>
-            <p class="text-ink-500">Falta de combustível no meio do caminho: entregamos um limite de combustível em caráter emergencial para o associado seguir viagem.</p>
+      </div>
+    </section>
+
+    <section class="section-light">
+      <div class="container mx-auto px-4">
+        <div class="card-surface flex flex-col md:flex-row md:items-center gap-6 p-8 mb-6">
+          <span class="number-badge">01</span>
+          <div class="relative z-10 text-bordo shrink-0"><i data-lucide="truck" class="w-16 h-16"></i></div>
+          <div class="relative z-10">
+            <h2 class="text-2xl md:text-3xl font-display font-bold uppercase tracking-tight mb-2">Reboque 24h</h2>
+            <p class="text-ink-500 text-lg max-w-2xl">Em caso de panes ou acidentes, providenciamos o envio de socorro elétrico/mecânico e, se necessário, o reboque até a oficina mais próxima dentro do limite contratado.</p>
           </div>
         </div>
-        <a href="/planos.html" class="btn-primary mt-16">Conheça nossos planos<i data-lucide="arrow-right" class="ml-3 h-6 w-6"></i></a>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="card-surface">
+            <span class="number-badge">02</span>
+            <div class="relative z-10 mb-4 text-bordo"><i data-lucide="key-round" class="w-10 h-10"></i></div>
+            <h2 class="relative z-10 text-xl font-display font-bold uppercase tracking-tight mb-2">Chaveiro</h2>
+            <p class="relative z-10 text-ink-500">Abertura veicular sem arrombamento em situações de emergência.</p>
+          </div>
+          <div class="card-surface">
+            <span class="number-badge">03</span>
+            <div class="relative z-10 mb-4 text-bordo"><i data-lucide="battery-charging" class="w-10 h-10"></i></div>
+            <h2 class="relative z-10 text-xl font-display font-bold uppercase tracking-tight mb-2">Carga de Bateria</h2>
+            <p class="relative z-10 text-ink-500">Suporte imediato para veículos sem partida, direto no local.</p>
+          </div>
+          <div class="card-surface">
+            <span class="number-badge">04</span>
+            <div class="relative z-10 mb-4 text-bordo"><i data-lucide="wrench" class="w-10 h-10"></i></div>
+            <h2 class="relative z-10 text-xl font-display font-bold uppercase tracking-tight mb-2">Troca de Pneu</h2>
+            <p class="relative z-10 text-ink-500">Auxílio ágil até a borracharia mais próxima em caso de pneu furado.</p>
+          </div>
+          <div class="card-surface">
+            <span class="number-badge">05</span>
+            <div class="relative z-10 mb-4 text-bordo"><i data-lucide="fuel" class="w-10 h-10"></i></div>
+            <h2 class="relative z-10 text-xl font-display font-bold uppercase tracking-tight mb-2">Pane Seca</h2>
+            <p class="relative z-10 text-ink-500">Entrega de combustível em caráter emergencial pra seguir viagem.</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-16">
+          <a href="/planos.html" class="btn-primary">Conheça nossos planos<i data-lucide="arrow-right" class="ml-1 h-6 w-6"></i></a>
+        </div>
       </div>
     </section>
   </main>
