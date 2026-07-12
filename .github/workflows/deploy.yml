@@ -52,9 +52,13 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          # A conta FTP dedicada já tem home = public_html (confirmado via
-          # diagnóstico), então o destino é a raiz do login, não ./public_html/.
-          server-dir: ./
+          # CONFIRMADO em produção (incidente 2026-07-12): a conta FTP tem
+          # home = /home1/monume18/, e o docroot real do site é a subpasta
+          # public_html/ dentro dela — NÃO a raiz do login. Usar './' aqui
+          # apaga a public_html/ inteira (já aconteceu, site ficou fora do
+          # ar) e ainda arrisca acertar as pastas de outros subdomínios que
+          # vivem no mesmo diretório raiz. Manter sempre como ./public_html/.
+          server-dir: ./public_html/
           dangerous-clean-slate: true
           exclude: |
             **/.well-known/**
