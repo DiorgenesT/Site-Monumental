@@ -42,6 +42,7 @@ import { initCounters } from './counters.js';
 import { initTestimonials } from './testimonials.js';
 import { initForm } from './forms.js';
 import { initFaq } from './faq.js';
+import { initHeroIntro, initScrollReveals } from './reveal.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,6 +91,8 @@ export function initSite() {
   initForm(document.getElementById('form-seja-prestador'), '/api/enviar-seja-prestador.php');
   initForm(document.getElementById('form-trabalhe-conosco'), '/api/enviar-trabalhe-conosco.php');
   initFaq();
+  initHeroIntro();
+  initScrollReveals();
   document.body.classList.add('js-ready');
 }
 

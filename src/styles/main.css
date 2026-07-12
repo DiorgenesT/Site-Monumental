@@ -7,30 +7,65 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-white text-neutral-900 font-sans antialiased;
+    @apply bg-ink-50 text-ink-800 font-sans antialiased;
   }
 }
 
 @layer components {
   .heading-xl {
-    @apply text-3xl md:text-5xl font-black leading-tight text-neutral-900;
+    @apply font-display font-black uppercase tracking-tight leading-[0.95] text-ink-900;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-sans font-bold uppercase tracking-[0.2em] text-xs text-bordo;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply w-6 h-[2px] bg-bordo inline-block;
   }
   .section-light {
-    @apply bg-white py-20 md:py-32;
+    @apply relative bg-ink-50 py-20 md:py-32;
   }
   .section-tinted {
-    @apply bg-neutral-50 py-20 md:py-32;
+    @apply relative bg-ink-100 py-20 md:py-32;
+  }
+  .section-cut::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, theme('colors.bordo.DEFAULT'), theme('colors.bordo.dark'));
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+  .texture-grain {
+    position: relative;
+  }
+  .texture-grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 3px 3px;
+    mix-blend-mode: overlay;
   }
   .card-surface {
-    @apply bg-white rounded-xl shadow-lg border border-neutral-100 p-6;
+    @apply relative bg-white p-6 border-l-4 border-bordo;
+    box-shadow: 8px 8px 0 0 rgba(28, 23, 18, 0.06);
   }
   .btn-primary {
-    @apply inline-flex items-center bg-gradient-to-r from-bordo to-bordo-dark hover:from-bordo-dark hover:to-bordo
-           text-white font-bold py-4 px-10 rounded-full text-lg transition-all duration-300
-           transform hover:scale-105 shadow-lg hover:shadow-bordo/40;
+    @apply inline-flex items-center gap-3 bg-bordo hover:bg-bordo-dark
+           text-white font-display font-bold uppercase tracking-wide py-4 px-10 text-lg
+           transition-all duration-300;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 93% 100%, 0 100%);
+  }
+  .btn-primary:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 0 theme('colors.ink.900');
   }
   .badge-red {
-    @apply text-bordo font-bold;
+    @apply text-bordo;
   }
   .dg-mark {
     @apply gap-1;

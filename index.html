@@ -33,53 +33,61 @@
 <body>
   <%- include('/src/partials/header.html') %>
   <main>
-    <section class="relative min-h-screen flex items-center bg-cover bg-center" style="background-image: url('/img/hero-monumental.jpg');">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-bordo-dark/80"></div>
-      <div class="container mx-auto px-4 relative z-10 text-center">
-        <h1 class="heading-xl text-white text-4xl md:text-6xl">
-          Assistência 24h para Associações de Proteção Veicular
-        </h1>
-        <p class="mt-6 text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
-          Mais segurança e agilidade para sua associação oferecer tranquilidade total aos seus associados.
-        </p>
-        <a href="/planos.html" class="btn-primary mt-10">
-          Conheça nossos planos
-          <i data-lucide="arrow-right" class="ml-3 h-6 w-6"></i>
-        </a>
+    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-ink-900">
+      <div class="absolute inset-0">
+        <img src="/img/hero-monumental.jpg" alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-b from-ink-900/50 via-ink-900/75 to-ink-900/95 lg:bg-gradient-to-r lg:from-ink-900 lg:via-ink-900/40 lg:to-transparent"></div>
+      </div>
+      <div class="hero-panel texture-grain absolute inset-y-0 left-0 hidden lg:block lg:w-[60%] bg-gradient-to-br from-bordo to-bordo-dark"
+           style="clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="hero-content max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
+          <span class="eyebrow text-white">Assistência 24h · Cobertura Nacional</span>
+          <h1 class="heading-xl text-white text-5xl sm:text-6xl lg:text-7xl mt-5">
+            Socorro rápido<br>para sua<br><span class="text-ink-900 bg-white px-3">associação</span>
+          </h1>
+          <p class="mt-6 text-lg md:text-xl text-white/85 max-w-xl mx-auto lg:mx-0">
+            Mais segurança e agilidade para sua associação oferecer tranquilidade total aos seus associados.
+          </p>
+          <a href="/planos.html" class="btn-primary mt-10 bg-white !text-bordo hover:!text-white hover:!bg-ink-900">
+            Conheça nossos planos
+            <i data-lucide="arrow-right" class="ml-1 h-6 w-6"></i>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="section-light">
+    <section class="section-light section-cut">
       <div class="container mx-auto px-4 text-center">
         <h2 class="heading-xl mb-4">Serviços <span class="badge-red">Oferecidos</span></h2>
-        <p class="text-lg text-neutral-600 max-w-3xl mx-auto mb-16">
+        <p class="text-lg text-ink-600 max-w-3xl mx-auto mb-16">
           Assistência veicular completa, sempre à disposição dos seus associados:
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           <div class="card-surface flex flex-col items-center text-center">
             <div class="mb-4 text-bordo"><i data-lucide="truck" class="w-12 h-12"></i></div>
             <h3 class="text-xl font-bold mb-2">Reboque 24h</h3>
-            <p class="text-neutral-500">Remoção rápida e segura do seu veículo.</p>
+            <p class="text-ink-500">Remoção rápida e segura do seu veículo.</p>
           </div>
           <div class="card-surface flex flex-col items-center text-center">
             <div class="mb-4 text-bordo"><i data-lucide="key-round" class="w-12 h-12"></i></div>
             <h3 class="text-xl font-bold mb-2">Chaveiro</h3>
-            <p class="text-neutral-500">Abertura veicular em situações de emergência.</p>
+            <p class="text-ink-500">Abertura veicular em situações de emergência.</p>
           </div>
           <div class="card-surface flex flex-col items-center text-center">
             <div class="mb-4 text-bordo"><i data-lucide="battery-charging" class="w-12 h-12"></i></div>
             <h3 class="text-xl font-bold mb-2">Carga de Bateria</h3>
-            <p class="text-neutral-500">Suporte imediato para veículos sem partida.</p>
+            <p class="text-ink-500">Suporte imediato para veículos sem partida.</p>
           </div>
           <div class="card-surface flex flex-col items-center text-center">
             <div class="mb-4 text-bordo"><i data-lucide="wrench" class="w-12 h-12"></i></div>
             <h3 class="text-xl font-bold mb-2">Troca de Pneu</h3>
-            <p class="text-neutral-500">Auxílio ágil em caso de pneu furado.</p>
+            <p class="text-ink-500">Auxílio ágil em caso de pneu furado.</p>
           </div>
           <div class="card-surface flex flex-col items-center text-center">
             <div class="mb-4 text-bordo"><i data-lucide="fuel" class="w-12 h-12"></i></div>
             <h3 class="text-xl font-bold mb-2">Pane Seca</h3>
-            <p class="text-neutral-500">Entrega de combustível em caráter emergencial.</p>
+            <p class="text-ink-500">Entrega de combustível em caráter emergencial.</p>
           </div>
         </div>
         <a href="/servicos.html" class="btn-primary mt-12">Ver todos os detalhes<i data-lucide="arrow-right" class="ml-3 h-6 w-6"></i></a>
@@ -90,36 +98,36 @@
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
           <h2 class="heading-xl">Nossos <span class="badge-red">Números</span></h2>
-          <p class="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
+          <p class="mt-4 text-lg text-ink-600 max-w-3xl mx-auto">
             Resultados que comprovam nossa eficiência e compromisso com nossos parceiros.
           </p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <div class="card-surface text-center">
             <div class="flex justify-center mb-4 text-bordo"><i data-lucide="check-circle-2" class="w-14 h-14"></i></div>
-            <span class="number-counter text-5xl font-black text-neutral-900" data-target="15000">0</span>
-            <p class="mt-2 text-lg text-neutral-500">Atendimentos/Mês</p>
+            <span class="number-counter text-5xl font-black text-ink-900" data-target="15000">0</span>
+            <p class="mt-2 text-lg text-ink-500">Atendimentos/Mês</p>
           </div>
           <div class="card-surface text-center">
             <div class="flex justify-center mb-4 text-bordo"><i data-lucide="smile" class="w-14 h-14"></i></div>
-            <span class="number-counter text-5xl font-black text-neutral-900" data-target="98">0</span><span class="text-5xl font-black text-bordo">%</span>
-            <p class="mt-2 text-lg text-neutral-500">Satisfação</p>
+            <span class="number-counter text-5xl font-black text-ink-900" data-target="98">0</span><span class="text-5xl font-black text-bordo">%</span>
+            <p class="mt-2 text-lg text-ink-500">Satisfação</p>
           </div>
           <div class="card-surface text-center">
             <div class="flex justify-center mb-4 text-bordo"><i data-lucide="map-pin" class="w-14 h-14"></i></div>
-            <span class="number-counter text-5xl font-black text-neutral-900" data-target="26">0</span>
-            <p class="mt-2 text-lg text-neutral-500">Estados Atendidos</p>
+            <span class="number-counter text-5xl font-black text-ink-900" data-target="26">0</span>
+            <p class="mt-2 text-lg text-ink-500">Estados Atendidos</p>
           </div>
           <div class="card-surface text-center">
             <div class="flex justify-center mb-4 text-bordo"><i data-lucide="users" class="w-14 h-14"></i></div>
-            <span class="text-neutral-900">+</span><span class="number-counter text-5xl font-black text-neutral-900" data-target="50">0</span>
-            <p class="mt-2 text-lg text-neutral-500">Associações Parceiras</p>
+            <span class="text-ink-900">+</span><span class="number-counter text-5xl font-black text-ink-900" data-target="50">0</span>
+            <p class="mt-2 text-lg text-ink-500">Associações Parceiras</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-bordo py-24 text-center">
+    <section class="texture-grain bg-bordo py-24 text-center">
       <div class="relative z-10 p-4">
         <h2 class="text-4xl md:text-6xl font-black text-white">Pronto para fortalecer sua associação?</h2>
         <p class="mt-4 text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
