@@ -104,3 +104,51 @@
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   }
 }
+
+/* Animação de entrada do hero em CSS puro: não depende de JS terminar de
+   carregar/executar sem erros para o conteúdo ficar visível — o navegador
+   garante que a animação sempre resolve para o estado final (opacity: 1). */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-content > * {
+    opacity: 0;
+    animation: hero-rise 0.7s ease-out forwards;
+  }
+  .hero-content > .eyebrow {
+    animation-delay: 0.1s;
+  }
+  .hero-content > h1 {
+    animation-delay: 0.25s;
+  }
+  .hero-content > p {
+    animation-delay: 0.45s;
+  }
+  .hero-content > .btn-primary {
+    animation-delay: 0.6s;
+  }
+  .hero-panel {
+    opacity: 0;
+    animation: hero-panel-rise 0.9s ease-out 0.1s forwards;
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-panel-rise {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

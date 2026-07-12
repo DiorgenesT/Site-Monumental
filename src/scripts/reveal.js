@@ -6,26 +6,13 @@ export function shouldAnimate(mediaQueryResult) {
   return !mediaQueryResult.matches;
 }
 
-export function initHeroIntro() {
-  const hero = document.getElementById('hero');
-  if (!hero) return;
-  if (!shouldAnimate(window.matchMedia('(prefers-reduced-motion: reduce)'))) return;
-
-  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-  tl.from('#hero .eyebrow', { opacity: 0, y: 16, duration: 0.5 })
-    .from('#hero h1', { opacity: 0, y: 30, duration: 0.7 }, '-=0.3')
-    .from('#hero p', { opacity: 0, y: 20, duration: 0.6 }, '-=0.4')
-    .from('#hero .btn-primary', { opacity: 0, y: 20, duration: 0.5 }, '-=0.3')
-    .from('.hero-panel', { xPercent: -8, opacity: 0, duration: 0.9 }, 0);
-}
-
 export function initScrollReveals() {
   if (!shouldAnimate(window.matchMedia('(prefers-reduced-motion: reduce)'))) return;
   gsap.registerPlugin(ScrollTrigger);
 
   const headings = document.querySelectorAll('main h1, main h2');
   headings.forEach((el) => {
-    if (el.closest('#hero')) return;
+    if (el.closest('#hero') || el.closest('.page-header')) return;
     gsap.from(el, {
       opacity: 0,
       y: 32,
@@ -50,4 +37,11 @@ export function initScrollReveals() {
       scrollTrigger: { trigger: parent, start: 'top 88%' },
     });
   });
+
+  // Fontes e imagens que carregam depois do primeiro layout podem deslocar
+  // a posição dos elementos e "confundir" os gatilhos de scroll já calculados.
+  // Recalcula depois que tudo estiver carregado, pra não deixar nada preso
+  // em estado invisível.
+  window.addEventListener('load', () => ScrollTrigger.refresh());
+  document.fonts?.ready?.then(() => ScrollTrigger.refresh());
 }
