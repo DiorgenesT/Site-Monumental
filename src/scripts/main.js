@@ -30,6 +30,7 @@ import {
   Users,
   Wallet,
   Wrench,
+  X,
 } from 'lucide';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -75,6 +76,7 @@ const usedIcons = {
   Users,
   Wallet,
   Wrench,
+  X,
 };
 
 export function initSite() {

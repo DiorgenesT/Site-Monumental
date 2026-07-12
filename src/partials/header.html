@@ -20,17 +20,20 @@
         <img src="/img/monumentalbranca.png" alt="Logo Monumental" class="h-full w-auto">
       </a>
       <nav>
-        <button id="nav-toggle" class="md:hidden text-white" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
-          <i data-lucide="menu" class="w-7 h-7"></i>
+        <button id="nav-toggle" class="md:hidden relative z-[60] text-white" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+          <i data-lucide="menu" id="nav-icon-menu" class="w-7 h-7"></i>
+          <i data-lucide="x" id="nav-icon-close" class="w-7 h-7 hidden"></i>
         </button>
-        <ul id="nav-menu" class="hidden md:flex items-center space-x-6 font-display font-bold uppercase tracking-wide text-white text-sm">
-          <li><a href="/" class="hover:text-white/70 transition-colors">Início</a></li>
-          <li><a href="/sobre-nos.html" class="hover:text-white/70 transition-colors">Sobre Nós</a></li>
-          <li><a href="/servicos.html" class="hover:text-white/70 transition-colors">Serviços</a></li>
-          <li><a href="/planos.html" class="hover:text-white/70 transition-colors">Planos</a></li>
-          <li><a href="/seja-prestador.html" class="hover:text-white/70 transition-colors">Prestadores</a></li>
-          <li><a href="/trabalhe-conosco.html" class="hover:text-white/70 transition-colors">Trabalhe Conosco</a></li>
-          <li><a href="/contato.html" class="hover:text-white/70 transition-colors">Contato</a></li>
+        <ul id="nav-menu" class="hidden fixed inset-0 z-50 flex-col items-center justify-center gap-2 bg-ink-900 texture-grain text-2xl
+                                  md:static md:z-auto md:flex md:flex-row md:items-center md:justify-start md:gap-6 md:bg-transparent md:text-sm
+                                  font-display font-bold uppercase tracking-wide text-white">
+          <li><a href="/" data-nav-link class="block px-6 py-3 hover:text-white/70 transition-colors">Início</a></li>
+          <li><a href="/sobre-nos.html" data-nav-link class="block px-6 py-3 hover:text-white/70 transition-colors">Sobre Nós</a></li>
+          <li><a href="/servicos.html" data-nav-link class="block px-6 py-3 hover:text-white/70 transition-colors">Serviços</a></li>
+          <li><a href="/planos.html" data-nav-link class="block px-6 py-3 hover:text-white/70 transition-colors">Planos</a></li>
+          <li><a href="/seja-prestador.html" data-nav-link class="block px-6 py-3 hover:text-white/70 transition-colors">Prestadores</a></li>
+          <li><a href="/trabalhe-conosco.html" data-nav-link class="block px-6 py-3 hover:text-white/70 transition-colors">Trabalhe Conosco</a></li>
+          <li><a href="/contato.html" data-nav-link class="block px-6 py-3 hover:text-white/70 transition-colors">Contato</a></li>
         </ul>
       </nav>
     </div>
