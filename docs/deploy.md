@@ -12,13 +12,18 @@ Em **Settings > Secrets and variables > Actions** do repositório, cadastre:
 | Secret | Valor |
 |---|---|
 | `FTP_SERVER` | Endereço do servidor FTP da HostGator (cPanel > Contas FTP) |
-| `FTP_USERNAME` | Usuário FTP |
+| `FTP_USERNAME` | Usuário FTP (geralmente `usuario@monumentalassistencia.com.br`) |
 | `FTP_PASSWORD` | Senha FTP |
-| `SMTP_HOST` | Host SMTP do e-mail institucional (cPanel > Contas de E-mail > Configurar Cliente de E-mail) |
+| `SMTP_HOST` | `mail.monumentalassistencia.com.br` (convenção padrão HostGator) |
 | `SMTP_PORT` | Porta SMTP (ex: `465`) |
 | `SMTP_SECURE` | `ssl` (porta 465) ou `tls` (porta 587) |
-| `SMTP_USER` | `direcao@monumentalassistencia.com.br` |
-| `SMTP_PASS` | Senha da caixa de e-mail |
+| `SMTP_USER` | Caixa **dedicada** ao envio automático, ex: `naoresponda@monumentalassistencia.com.br` |
+| `SMTP_PASS` | Senha dessa caixa dedicada |
+
+**Importante:** `SMTP_USER`/`SMTP_PASS` devem ser de uma caixa criada só para o site enviar
+e-mails (ex: `naoresponda@monumentalassistencia.com.br`) — **nunca** a caixa `direcao@` que a
+empresa usa no dia a dia, para não precisar trocar a senha dela. O destino dos formulários
+(`direcao@monumentalassistencia.com.br`) é fixo no workflow e não depende de Secret.
 
 O `public/api/config.php` é **gerado automaticamente** a partir desses Secrets a cada deploy —
 nunca precisa ser enviado manualmente, e nunca é apagado pela sincronização.
@@ -38,8 +43,9 @@ para HostGator > Run workflow**.
 
 1. Rodar `npm install` (primeira vez) e `npm run build` localmente — gera a pasta `dist/`.
 2. Copiar `public/api/config.example.php` para `public/api/config.php` e preencher com os
-   dados reais da caixa de e-mail. Rodar `npm run build` novamente após criar o `config.php`
-   (ele é copiado de `public/` para `dist/` no build).
+   dados reais da caixa de e-mail dedicada ao envio (`naoresponda@...`, não a `direcao@...` de
+   uso diário). Rodar `npm run build` novamente após criar o `config.php` (ele é copiado de
+   `public/` para `dist/` no build).
 3. Via FTP ou File Manager do cPanel, enviar todo o conteúdo de `dist/` para `public_html/`.
    Pode excluir `dist/api/tests/` do envio — é só o script de teste local.
 4. Confirmar em `https://www.monumentalassistencia.com.br/api/config.php` que o acesso retorna

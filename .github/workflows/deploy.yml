@@ -27,6 +27,9 @@ jobs:
       - name: Build de produção
         run: npm run build
 
+      # SMTP_USER/SMTP_PASS são de uma caixa dedicada só ao envio automático
+      # (ex: naoresponda@monumentalassistencia.com.br) — nunca a caixa de uso
+      # diário da empresa. O destino (to_email) é fixo e não depende de Secret.
       - name: Gera public/api/config.php a partir dos Secrets
         run: |
           cat > dist/api/config.php << EOF
@@ -37,7 +40,7 @@ jobs:
               'smtp_secure' => '${{ secrets.SMTP_SECURE }}',
               'smtp_user' => '${{ secrets.SMTP_USER }}',
               'smtp_pass' => '${{ secrets.SMTP_PASS }}',
-              'to_email' => '${{ secrets.SMTP_USER }}',
+              'to_email' => 'direcao@monumentalassistencia.com.br',
               'to_name' => 'Monumental Assistência',
           ];
           EOF
