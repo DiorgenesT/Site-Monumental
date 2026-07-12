@@ -52,7 +52,9 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: ./public_html/
+          # A conta FTP dedicada já tem home = public_html (confirmado via
+          # diagnóstico), então o destino é a raiz do login, não ./public_html/.
+          server-dir: ./
           dangerous-clean-slate: true
           exclude: |
             **/.well-known/**
